@@ -1,0 +1,1 @@
+A simple web application that uses JavaScript, Semantic UI, Node, Express, and MongoDB to create a basic blog app.

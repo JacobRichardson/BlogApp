@@ -6,7 +6,8 @@ express             = require("express"),
 app                 = express();
 
 // APP CONFIG
-mongoose.connect('mongodb://localhost:27017/restful_blog_app', { useNewUrlParser: true });
+var url =  process.env.DATABASEURL || 'mongodb://localhost:27017/restful_blog_app';
+mongoose.connect(url, { useNewUrlParser: true });
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
